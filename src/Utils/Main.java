@@ -107,6 +107,17 @@ public class Main {
                         }
                     }
                 }
+                case 8->{
+                    boolean eight = true;
+                    while (eight){
+                        System.out.println("RETURNING AN ITEM");
+                        borrowingServices.ReturnItem();
+                        System.out.println("Enter E to exit");
+                        if (scanner.nextLine().equalsIgnoreCase("e")) {
+                            eight = false;
+                        }
+                    }
+                }
             }
 
 
