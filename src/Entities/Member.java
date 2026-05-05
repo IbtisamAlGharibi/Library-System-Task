@@ -1,9 +1,13 @@
 package Entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Member extends Address{
     String memberName;
     String memberID;
     Integer memberPhone;
+    List<LibraryItem> libraryItems = new ArrayList<>();
 
     public String getMemberName() {
         return memberName;
@@ -15,6 +19,14 @@ public class Member extends Address{
 
     public Integer getMemberPhone() {
         return memberPhone;
+    }
+
+    public List<LibraryItem> getLibraryItems() {
+        return libraryItems;
+    }
+
+    public void setLibraryItems(List<LibraryItem> libraryItems) {
+        this.libraryItems = libraryItems;
     }
 
     public void setMemberName(String memberName) {
