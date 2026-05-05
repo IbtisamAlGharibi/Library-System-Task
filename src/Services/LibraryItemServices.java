@@ -47,7 +47,7 @@ Scanner scanner = new Scanner(System.in);
         }
         return libraryItems;
     }
-    public String FindItemById(){
+    public boolean FindItemById(){
         System.out.println("Please enter the item ID you want to find it");
         String searchedId = scanner.nextLine();
 
@@ -56,10 +56,10 @@ Scanner scanner = new Scanner(System.in);
 
             if (searchedId.equalsIgnoreCase(target)){
               libraryItem.DisplayItemsDetails();
-
+                return true;
             }
         }
-        return searchedId + " " + "Details are displayed";
+        return false;
 
     }
 

@@ -7,9 +7,12 @@ public class BorrowingServices {
     MemberServices memberServices = new MemberServices();
     Scanner scanner = new Scanner(System.in);
 
-    /*public void BorrowItem(){
+    public void BorrowItem(){
         System.out.println("Please enter your ID");
         String borrowerID = scanner.nextLine();
-        memberServices.FindMemberByID();
-    }*/
+            if (memberServices.FindMemberByID() == true){
+                System.out.println(borrowerID + " is MEMBER");
+
+            }
+    }
 }
