@@ -57,11 +57,21 @@ public class Main {
                         System.out.println("Enter E to exit");
                         if (scanner.nextLine().equalsIgnoreCase("e")) {
                             third = false;
+                        }
+                    }
+                }
+                case 4->{
+                    boolean fourth = true;
+                    while (fourth){
+                        System.out.println("SEARCHING BY TITLE");
+                        libraryItemServices.FindItemWhoContain();
+                        System.out.println("Enter E to exit");
+                        if (scanner.nextLine().equalsIgnoreCase("e")) {
+                            fourth = false;
+                        }
                     }
 
                 }
-            }
-
             }
 
 
