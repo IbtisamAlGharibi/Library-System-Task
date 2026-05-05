@@ -29,7 +29,7 @@ Scanner scanner = new Scanner(System.in);
         Integer publishYear = Integer.valueOf(scanner.nextLine());
         libraryItem.setPublishYear(publishYear);
 
-        System.out.println("Please enter Item status(Borrowed/Not Borrowed");
+        System.out.println("Please enter Item status(Borrowed/Not Borrowed)");
         String status = scanner.nextLine();
         libraryItem.setStatus(status);
 
