@@ -1,10 +1,14 @@
 package Utils;
 
+import Entities.LibraryItem;
 import Entities.Member;
 import Services.BorrowingServices;
 import Services.LibraryItemServices;
 import Services.MemberServices;
+import jdk.jshell.execution.Util;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -13,10 +17,11 @@ public class Main {
     static LibraryItemServices libraryItemServices = new LibraryItemServices();
     static MemberServices memberServices = new MemberServices();
     static  Member member = new Member();
+    static List<LibraryItem> libraryItems = new ArrayList<>();
 
     public static void main(String[] args){
 
-
+        System.out.println(MenuMessages.MAIN_MENU_MESSAGE);
         Boolean mainMenuContinue = true;
         while (mainMenuContinue) {
             Integer option = scanner.nextInt();
@@ -43,6 +48,19 @@ public class Main {
                         }
                     }
                 }
+                case 3->{
+                    boolean third = true;
+                    while (third){
+                        for (int i =0;i< libraryItems.size();i++) {
+                            System.out.println(libraryItems.get(i));
+                        }
+                        System.out.println("Enter E to exit");
+                        if (scanner.nextLine().equalsIgnoreCase("e")) {
+                            third = false;
+                    }
+
+                }
+            }
 
             }
 
