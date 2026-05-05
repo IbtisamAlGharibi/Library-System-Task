@@ -1,7 +1,7 @@
 package Entities;
 
 public class LibraryItem {
-    LibraryItem libraryItem = new LibraryItem();
+    //LibraryItem libraryItem = new LibraryItem();
     String title;
     String status;
     String  ID;
@@ -51,9 +51,9 @@ public class LibraryItem {
     }
 
     public void DisplayItemsDetails(){
-        System.out.println("Item Title: " + libraryItem.getTitle());
-        System.out.println("Item ID: " + libraryItem.getID());
-        System.out.println("Item publish year: " + libraryItem.getPublishYear());
-        System.out.println("Item status: " + libraryItem.getStatus());
+        System.out.println("Item Title: " + getTitle());
+        System.out.println("Item ID: " + getID());
+        System.out.println("Item publish year: " +getPublishYear());
+        System.out.println("Item status: " +getStatus());
     }
 }
