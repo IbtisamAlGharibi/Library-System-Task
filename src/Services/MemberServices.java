@@ -59,4 +59,22 @@ public class MemberServices {
         }
         return members;
     }
+
+    public String FindMemberByID(){
+    System.out.println("Please enter the member Id you want to find");
+    String searchedMemberID = scanner.nextLine();
+
+        for (int i =0; i< members.size();i++){
+            String target = String.valueOf(members.get(i));
+
+            if (target.equalsIgnoreCase(searchedMemberID)){
+                System.out.println("Member Name: " + member.getMemberName());
+                System.out.println("Member ID: " + member.getMemberID());
+                System.out.println("Member Phone number: " + member.getMemberPhone());
+                System.out.println("Member Address: " + member.getStreet()+" " + member.getCity() +" " + member.getCountry());
+            }
+        }
+        return searchedMemberID + " " + "Details are displayed";
+
+    }
 }
