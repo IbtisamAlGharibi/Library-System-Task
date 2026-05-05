@@ -118,6 +118,12 @@ public class Main {
                         }
                     }
                 }
+                case 9->{
+                    System.out.println("Exit");
+                    mainMenuContinue = false;
+                }
+                default -> System.out.println("Select a choice from the list");
+                }
             }
 
 
