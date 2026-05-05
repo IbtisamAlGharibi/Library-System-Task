@@ -60,7 +60,7 @@ public class MemberServices {
         return members;
     }
 
-    public String FindMemberByID(){
+    public boolean FindMemberByID(){
     System.out.println("Please enter the member Id you want to find");
     String searchedMemberID = scanner.nextLine();
 
@@ -69,9 +69,10 @@ public class MemberServices {
 
             if (target.equalsIgnoreCase(searchedMemberID)){
                 member.DisplayMemberDetails();
+                return true;
             }
         }
-        return searchedMemberID + " " + "Details are displayed";
+        return false;
 
     }
 }
