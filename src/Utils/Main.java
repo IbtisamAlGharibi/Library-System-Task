@@ -72,6 +72,17 @@ public class Main {
                     }
 
                 }
+                case 5->{
+                    boolean fifth = true;
+                    while (fifth){
+                        System.out.println("REGISTERING NEW MEMBER");
+                        memberServices.addNewMember();
+                        System.out.println("Enter E to exit");
+                        if (scanner.nextLine().equalsIgnoreCase("e")) {
+                            fifth = false;
+                        }
+                    }
+                }
             }
 
 
