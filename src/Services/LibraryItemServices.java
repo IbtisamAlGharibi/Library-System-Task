@@ -65,5 +65,23 @@ Scanner scanner = new Scanner(System.in);
         return searchedId + " " + "Details are displayed";
 
     }
+
+    public String FindItemWhoContain(){
+        System.out.println("Please enter phrase you want to find");
+        String searchedPart = scanner.nextLine();
+
+        for (int i =0; i< libraryItems.size();i++){
+            String target = String.valueOf(libraryItems.get(i));
+
+            if (target.contains(searchedPart)){
+                System.out.println("Item Title: " + libraryItem.getTitle());
+                System.out.println("Item ID: " + libraryItem.getID());
+                System.out.println("Item publish year: " + libraryItem.getPublishYear());
+                System.out.println("Item status: " + libraryItem.getStatus());
+
+            }
+        }
+        return searchedPart +" "+  "is found in that item details";
+    }
 }
 
