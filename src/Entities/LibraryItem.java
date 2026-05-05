@@ -1,6 +1,7 @@
 package Entities;
 
 public class LibraryItem {
+    LibraryItem libraryItem = new LibraryItem();
     String title;
     String status;
     String  ID;
@@ -47,5 +48,12 @@ public class LibraryItem {
                 ", ID=" + ID +
                 ", publishYear=" + publishYear +
                 '}';
+    }
+
+    public void DisplayItemsDetails(){
+        System.out.println("Item Title: " + libraryItem.getTitle());
+        System.out.println("Item ID: " + libraryItem.getID());
+        System.out.println("Item publish year: " + libraryItem.getPublishYear());
+        System.out.println("Item status: " + libraryItem.getStatus());
     }
 }

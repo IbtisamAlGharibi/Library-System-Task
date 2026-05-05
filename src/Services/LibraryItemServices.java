@@ -55,10 +55,7 @@ Scanner scanner = new Scanner(System.in);
             String target = String.valueOf(libraryItems.get(i));
 
             if (searchedId.equalsIgnoreCase(target)){
-                System.out.println("Item Title: " + libraryItem.getTitle());
-                System.out.println("Item ID: " + libraryItem.getID());
-                System.out.println("Item publish year: " + libraryItem.getPublishYear());
-                System.out.println("Item status: " + libraryItem.getStatus());
+              libraryItem.DisplayItemsDetails();
 
             }
         }
@@ -74,11 +71,7 @@ Scanner scanner = new Scanner(System.in);
             String target = String.valueOf(libraryItems.get(i));
 
             if (target.contains(searchedPart)){
-                System.out.println("Item Title: " + libraryItem.getTitle());
-                System.out.println("Item ID: " + libraryItem.getID());
-                System.out.println("Item publish year: " + libraryItem.getPublishYear());
-                System.out.println("Item status: " + libraryItem.getStatus());
-
+                libraryItem.DisplayItemsDetails();
             }
         }
         return searchedPart +" "+  "is found in that item details";
