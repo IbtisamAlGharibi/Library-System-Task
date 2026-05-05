@@ -29,4 +29,24 @@ public class BorrowingServices {
                 System.out.println( borrowerID +" "+ "Is NOT MEMBER");
             }
     }
+
+    public void ReturnItem(){
+        System.out.println("Please enter your ID");
+        String borrowerID = scanner.nextLine();
+        if (memberServices.FindMemberByID() == true){
+            System.out.println(borrowerID + " is MEMBER");
+            System.out.println("Please enter the item ID you want to Return");
+            String itemToReturn = scanner.nextLine();
+            if (libraryItemServices.FindItemById() == true){
+                System.out.println(itemToReturn+" "+ "is available");
+                libraryItem.setStatus("NOT Borrowed");
+                System.out.println("Return Done");
+            }else {
+                System.out.println("SORRY, Item is not available");
+            }
+
+        }else {
+            System.out.println( borrowerID +" "+ "Is NOT MEMBER");
+        }
+    }
 }
