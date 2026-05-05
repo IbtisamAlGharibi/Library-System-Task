@@ -18,6 +18,7 @@ public class Main {
     static MemberServices memberServices = new MemberServices();
     static  Member member = new Member();
     static List<LibraryItem> libraryItems = new ArrayList<>();
+   static List<Member> members = new ArrayList<>();
 
     public static void main(String[] args){
 
@@ -82,6 +83,19 @@ public class Main {
                             fifth = false;
                         }
                     }
+                }
+                case 6->{
+                    boolean six = true;
+                    while (six){
+                        for (int i =0;i< members.size();i++) {
+                            System.out.println(members.get(i));
+                        }
+                        System.out.println("Enter E to exit");
+                        if (scanner.nextLine().equalsIgnoreCase("e")) {
+                            six = false;
+                        }
+                    }
+
                 }
             }
 
