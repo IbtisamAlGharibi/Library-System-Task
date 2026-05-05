@@ -17,7 +17,7 @@ Scanner scanner = new Scanner(System.in);
     public LibraryItem addItem(){
 
         System.out.println(" ** Adding new Item **");
-        System.out.println("Please enter Item Id");
+        System.out.println("Please Enter item ID");
         String newItemId = scanner.nextLine();
         libraryItem.setID(newItemId);
 
@@ -46,6 +46,23 @@ Scanner scanner = new Scanner(System.in);
             }
         }
         return libraryItems;
+    }
+    public String FindItemById(){
+        System.out.println("Please enter the item ID you want to find it");
+        String searchedId = scanner.nextLine();
+
+        for (int i =0; i< libraryItems.size();i++){
+            String target = String.valueOf(libraryItems.get(i));
+
+            if (searchedId.equalsIgnoreCase(target)){
+                System.out.println("Item Title: " + libraryItem.getTitle());
+                System.out.println("Item ID: " + libraryItem.getID());
+                System.out.println("Item publish year: " + libraryItem.getPublishYear());
+                System.out.println("Item status: " + libraryItem.getStatus());
+
+            }
+        }
+        return searchedId + " " + "Details are displayed";
 
     }
 }
