@@ -95,7 +95,17 @@ public class Main {
                             six = false;
                         }
                     }
-
+                }
+                case 7->{
+                    boolean seven = true;
+                    while (seven){
+                        System.out.println("BORROWING AN ITEM");
+                        borrowingServices.BorrowItem();
+                        System.out.println("Enter E to exit");
+                        if (scanner.nextLine().equalsIgnoreCase("e")) {
+                            seven = false;
+                        }
+                    }
                 }
             }
 
