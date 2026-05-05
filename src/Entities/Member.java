@@ -7,6 +7,7 @@ public class Member extends Address{
     String memberName;
     String memberID;
     Integer memberPhone;
+    Member member = new Member();
     List<LibraryItem> libraryItems = new ArrayList<>();
 
     public String getMemberName() {
@@ -48,5 +49,11 @@ public class Member extends Address{
                 ", memberID='" + memberID + '\'' +
                 ", memberPhone=" + memberPhone +
                 '}';
+    }
+    public void DisplayMemberDetails(){
+        System.out.println("Member Name: " + member.getMemberName());
+        System.out.println("Member ID: " + member.getMemberID());
+        System.out.println("Member Phone number: " + member.getMemberPhone());
+        System.out.println("Member Address: " + member.getStreet()+" " + member.getCity() +" " + member.getCountry());
     }
 }

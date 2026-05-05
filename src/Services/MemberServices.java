@@ -68,10 +68,7 @@ public class MemberServices {
             String target = String.valueOf(members.get(i));
 
             if (target.equalsIgnoreCase(searchedMemberID)){
-                System.out.println("Member Name: " + member.getMemberName());
-                System.out.println("Member ID: " + member.getMemberID());
-                System.out.println("Member Phone number: " + member.getMemberPhone());
-                System.out.println("Member Address: " + member.getStreet()+" " + member.getCity() +" " + member.getCountry());
+                member.DisplayMemberDetails();
             }
         }
         return searchedMemberID + " " + "Details are displayed";
